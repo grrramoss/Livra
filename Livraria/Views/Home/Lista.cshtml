@@ -1,0 +1,52 @@
+﻿@model Livra.Models.LivrosModel
+
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista</h2>
+
+<fildset>
+    <legend>Dados do livro</legend>
+
+
+    <div class="editor-label">
+        <b>@Html.DisplayNameFor(x => x.Titulo)</b>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(x => x.Titulo)
+    </div>
+
+    <div class="editor-label">
+        <b>@Html.DisplayNameFor(x => x.Autor)</b>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(x => x.Autor)
+    </div>
+
+    <div class="editor-label">
+        <b>@Html.DisplayNameFor(x => x.Genero)</b>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(x => x.Genero)
+    </div>
+
+    <div class="editor-label">
+        <b>@Html.DisplayNameFor(x => x.Estoque)</b>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(x => x.Estoque)
+    </div>
+
+    <div class="editor-label">
+        <b>@Html.DisplayNameFor(x => x.Preço)</b>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(x => x.Preço)
+    </div>
+
+</fildset>
+
+@Html.ActionLink("Voltar", "Cadastro", "Home")
+
+

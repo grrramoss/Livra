@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Livra.Models.LivrosModel>
+
+
+@{
+    ViewBag.Title = "Todos Os Livro";
+
+}
+<h2>Todos Os Livro</h2>
+
+<div>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                @Html.ActionLink(item.Titulo, "MostrarGenero", "Dados", new
+                {
+                    @titulo = item.Titulo.ToLower(),
+                @genero = item.Genero.ToLower(),
+                @preço = item.Preço
+
+                }, null);
+
+                <em>@Html.DisplayFor(modelItem => item.Autor) </em>
+                <em>@Html.DisplayFor(modelItem => item.Estoque) </em>
+                <b>@Html.DisplayFor(modelItem => item.Preço)</b>
+            </li>
+        }
+    </ul>
+</div>

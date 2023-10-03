@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Livra.Models.LivrosModel>
+
+<h2>Livros Cadastrados</h2>
+
+<div>
+
+    @Html.ActionLink("Todos os Livros", "TodosLivros", "Dados")
+</div>
+
+<div>
+    <h3>Gêneros:</h3>
+    <ul>
+        @foreach (string item in ViewBag.Generos)
+        {
+            <li>
+                @Html.ActionLink(item, "MostrarGenero", "Dados", new { @genero = item }, null)
+            </li>
+        }
+    </ul>
+
+</div>
+
+
+

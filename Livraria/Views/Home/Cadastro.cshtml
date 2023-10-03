@@ -1,0 +1,74 @@
+﻿@model Livra.Models.LivrosModel
+
+
+@{
+    ViewBag.Title = "Cadastro";
+}
+<h2>Livraria Jr.</h2>
+<p>Cadastro de livros</p>
+
+
+<br />
+<br />
+
+
+@using (Html.BeginForm("Lista", "Home", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend> Informações Cadastrais</legend>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(x => x.Titulo)
+        </div>
+
+        <div class="editor-field">
+            @Html.EditorFor(x => x.Titulo)
+            @Html.ValidationMessageFor(x => x.Titulo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(x => x.Autor)
+        </div>
+
+        <div class="editor-field">
+            @Html.EditorFor(x => x.Autor)
+            @Html.ValidationMessageFor(x => x.Autor)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(x => x.Genero)
+        </div>
+
+        <div class="editor-field">
+            @Html.EditorFor(x => x.Genero)
+            @Html.ValidationMessageFor(x => x.Genero)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(x => x.Estoque)
+        </div>
+
+        <div class="editor-field">
+            @Html.EditorFor(x => x.Estoque)
+            @Html.ValidationMessageFor(x => x.Estoque)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(x => x.Preço)
+        </div>
+
+        <div class="editor-field">
+            @Html.EditorFor(x => x.Preço)
+            @Html.ValidationMessageFor(x => x.Preço)
+        </div>
+
+
+        <p><input type="submit" value="Enviar" /></p>
+
+    </fieldset>
+
+
+}
+
